@@ -1,4 +1,5 @@
 ﻿
+using BookApp.Models;
 using Microsoft.EntityFrameworkCore;
 namespace BookApp.Data
 {
