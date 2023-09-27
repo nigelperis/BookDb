@@ -1,4 +1,3 @@
-
 using BookApp;
 using BookApp.Data;
 using BookApp.Models;
@@ -68,26 +67,33 @@ namespace WebApp.Controllers
 
 
         [HttpPut]
-        public async Task<ActionResult<List<Book>>> UpdateBook(Book request)
+        public async Task<ActionResult<Book>> UpdateBook(Book request)
         {
             var dbBook = await this.context.Books.FindAsync(request.BookId);
-            if (dbBook == null)
-                return BadRequest("Book not found");
 
-            dbBook.Title = request.Title;
-            dbBook.Author = request.Author;
-            dbBook.Price = request.Price;
-            dbBook.CopiesInStock = request.CopiesInStock;
+            if (dbBook == null)
+            {
+                this.context.Books.Add(request);
+                await this.context.SaveChangesAsync();
+                return CreatedAtAction("Get",new {id=request.BookId},request);
+            }
+            else
+            {
+                dbBook.Title = request.Title;
+                dbBook.Author = request.Author;
+                dbBook.Price = request.Price;
+                dbBook.CopiesInStock = request.CopiesInStock;
+            }
 
             var saveResult = await this.context.SaveChangesAsync();
 
             if (saveResult > 0)
             {
-                return Ok(dbBook);
+                return Ok(request); 
             }
             else
             {
-                return BadRequest("Failed to update the book");
+                return BadRequest("Failed to update or create the book");
             }
         }
         [HttpDelete]

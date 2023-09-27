@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nigel Peris\\source\\repos\\BookApp\\BookApp\\BookApp.csproj": {}
+    "C:\\Users\\Nigel\\source\\repos\\BookDb\\BookApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nigel Peris\\source\\repos\\BookApp\\BookApp\\BookApp.csproj": {
+    "C:\\Users\\Nigel\\source\\repos\\BookDb\\BookApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nigel Peris\\source\\repos\\BookApp\\BookApp\\BookApp.csproj",
+        "projectUniqueName": "C:\\Users\\Nigel\\source\\repos\\BookDb\\BookApp.csproj",
         "projectName": "BookApp",
-        "projectPath": "C:\\Users\\Nigel Peris\\source\\repos\\BookApp\\BookApp\\BookApp.csproj",
-        "packagesPath": "C:\\Users\\Nigel Peris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nigel Peris\\source\\repos\\BookApp\\BookApp\\obj\\",
+        "projectPath": "C:\\Users\\Nigel\\source\\repos\\BookDb\\BookApp.csproj",
+        "packagesPath": "C:\\Users\\Nigel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nigel\\source\\repos\\BookDb\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nigel Peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nigel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,6 +58,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.21.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
