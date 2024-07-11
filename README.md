@@ -4,7 +4,7 @@ This is a simple REST API built in C# using ASP.NET Core. It provides endpoints 
 
 ## Description
 
-The Book API allows users to perform CRUD (Create, Read, Update, Delete) operations on books. It exposes the following endpoints:
+The Book API allows users to perform CRUD operations on books. It exposes the following endpoints:
 
 - `GET /api/v1/book`: Retrieves a list of all books or a specific book by ID.
 - `POST /api/v1/book`: Adds a new book to the database.
